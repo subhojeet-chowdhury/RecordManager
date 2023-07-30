@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+<div class="mt-4">
+    <h2 style="text-align: center;">Create a new record</h2>
+    <form class="mt-2" method="post">
+    <div class="mb-3">
+        <label for="fullname" class="form-label">Full Name</label>
+        <input type="text" class="form-control" name="fullname" id="fullname" aria-describedby="fullnamehelp">
+    </div>
+    <div class="mb-3">
+        <label for="midterm1" class="form-label">Midterm #1</label>
+        <input type="number" class="form-control" name="midterm1" id="midterm1">
+    </div>
+    <div class="mb-3">
+        <label for="midterm2" class="form-label">Midterm #2</label>
+        <input type="number" class="form-control"  name="midterm2"  id="midterm2">
+    </div>
+    <div class="mb-3">
+        <label for="finalexam" class="form-label">Final Exam</label>
+        <input type="number" class="form-control" id="finalexam" name="finalexam">
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="/all_records" class="btn btn-primary btn-block">Display the records</a>
+    </form>
+
+</div>
+{% endblock %}

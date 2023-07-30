@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="container">
+    <h2 style="text-align: center;" class="mt-4">Records Page</h2>
+    <table class="table table-bordered mt-4">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Midterm 1</th>
+          <th>Midterm 2</th>
+          <th>Final Exam</th>
+          <th>Average Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for record in records %}
+        <tr>
+            <td>{{ record.fullname }}</td>
+            <td>{{ record.midterm1 }}</td>
+            <td>{{ record.midterm2 }}</td>
+            <td>{{ record.finalexam }}</td>
+            <td>{{ record.average_marks }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
